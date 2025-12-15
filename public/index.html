@@ -6,62 +6,61 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
 		/>
-		<title>Scramjet</title>
+		<title>Amphetamine</title>
 
 		<link rel="shortcut icon" content="favicon.webp" />
-
 		<link rel="stylesheet" href="index.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 		<script src="/scram/scramjet.all.js"></script>
 		<script src="baremux/index.js" defer></script>
 		<script src="epoxy/index.js" defer></script>
 		<script src="register-sw.js" defer></script>
 		<script src="search.js" defer></script>
 		<script src="index.js" defer></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
-		<div
-			title="Scramjet Logo"
-			class="flex-center logo-wrapper header-center"
-		>
-			<img class="logo" src="sj.png" alt="Scramjet" />
-			<h1>Scramjet | MW</h1>
-		</div>
-		<div class="flex-center desc left-margin">
-			<p>
-				Scramjet is an experimental interception based web proxy designed to evade internet censorship, 
-				bypass arbitrary web browser restrictions and innovate web proxy technologies.
-			</p>
-		</div>
-
-		<form id="sj-form" class="flex-center">
-			<input
-				id="sj-search-engine"
-				value="https://www.google.com/search?q=%s"
-				type="hidden"
-			/>
-			<input id="sj-address" type="text" placeholder="Search the web freely" />
+		<header>
+			<div style="text-align: right;">
+				<button class="button" onclick="openLegal()" style="text-align: left; margin-top: 5px;">Legal</button>
+				<button class="button" onclick="cloakBlank()" style="margin-top: 5px;">Cloak in about:blank</button>
+			</div>
+				</header>
+					<div>
+						<div class="amp-tw-root">
+							<h1 class="amp-tw-heading" aria-label="Amphetamine">
+								&nbsp;<span class="amp-tw-text amp-tw-thick"></span>
+							</h1>
+						</div>
+					</div>
+					<form id="sj-form" class="flex-center">
+						<input
+							id="sj-search-engine"
+							value="https://www.duckduckgo.com/search?q=%s"
+							type="hidden"/>
+						<label class="label">
+						<span class="shortcut">
+							<img src="https://duckduckgo.com/assets/logo_homepage.normal.v108.svg" alt="" onerror="this.style.display='none'">
+						</span>
+						<input type="text" id="sj-address" class="search_bar" placeholder="Search the web..." />
+						</label>
+					</div>
+				</div>
 		</form>
 		<div class="desc left-margin">
 			<p id="sj-error"></p>
 			<pre id="sj-error-code"></pre>
 		</div>
+		<p style="text-align: left; color: aquamarine;" class="homepage-disclaimer">
+			<strong>Disclaimer:</strong> Amphetamine is an independent project by <strong>mesadev</strong>. It uses the Scramjet proxy service but is <strong>not affiliated with or endorsed by Mercury Workshop</strong>.
+		</p>
 		<footer>
 			<div>
-				<a
-					title="The Mercury Workshop GitHub organization"
-					href="https://github.com/MercuryWorkshop"
-					>Mercury Workshop</a
-				>
-				<a
-					title="The example demo app for Scramjet"
-					href="https://github.com/MercuryWorkshop/Scramjet-Demo"
-					>GitHub</a
-				>
-				<a title="License information" href="credits.html">Credits</a>
-			</div>
-			<div>
-				<span>Scramjet &copy; MW 2025</span>
+				<span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">mesadev &copy;2025</span>
 			</div>
 		</footer>
 	</body>

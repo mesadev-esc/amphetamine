@@ -60,3 +60,17 @@ form.addEventListener("submit", async (event) => {
 	document.body.appendChild(frame.frame);	
 	frame.go(url);
 });
+
+function cloakBlank() {
+    // Open about:blank in the same tab
+    const newDoc = window.open("about:blank", "_self");
+
+    // Write the full HTML of the current page
+    newDoc.document.write(document.documentElement.outerHTML);
+
+    // Close the document so it renders
+    newDoc.document.close();
+}
+function openLegal() {
+  window.location.href = "./legal_info.html";
+}
