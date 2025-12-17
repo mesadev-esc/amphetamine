@@ -1,31 +1,19 @@
-<p align="center"><img src="https://raw.githubusercontent.com/MercuryWorkshop/scramjet/main/assets/scramjet.png" height="200"></p>
+<h1 align="center">Amphetamine</h1>
+<p align="center">Amphetamine is (currently) a fast and secure web proxy that lets you browse the internet freely and access content without restrictions. Amphetamine uses Scramjet, along with wisp-server-python and CurlTransport for reliable speed while maintaining a fully functional service.</p>
+<h2 align="center">Supported sites</h2>
+<p>Thanks to scramjet's proxy support, Amphetamine supports various sites, such as:</p>
+[Google](https://google.com)
+[Twitter](https://twitter.com)
+[Instagram](https://instagram.com)
+[Youtube](https://youtube.com)
+[Spotify](https://spotify.com)
+[Discord](https://discord.com)
+[Reddit](https://reddit.com)
+[GeForce NOW](https://play.geforcenow.com/)
+NOTE: If you plan to play any games using GeForce NOW you must link your accounts through a home device. A patch is currently being worked on to fix this annoying experience.
 
-<h1 align="center">Scramjet Demo</h1>
-
-The demo implementation of <a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a>, the most advanced web proxy.
-
-<a href="https://github.com/MercuryWorkshop/scramjet">Scramjet</a> is an experimental interception based web proxy designed with security, developer friendliness, and performance in mind. This project is made to evade internet censorship and bypass arbitrary web browser restrictions.
-
-#### Refer to <a href="https://github.com/HeyPuter/browser.js">browser.js</a> where this project will now receive updates outside of just bypassing internet censorship.
-
-## Supported Sites
-
-Scramjet has CAPTCHA support! Some of the popular websites that Scramjet supports include:
-
-- [Google](https://google.com)
-- [Twitter](https://twitter.com)
-- [Instagram](https://instagram.com)
-- [Youtube](https://youtube.com)
-- [Spotify](https://spotify.com)
-- [Discord](https://discord.com)
-- [Reddit](https://reddit.com)
-- [GeForce NOW](https://play.geforcenow.com/)
-
-Ensure you are not hosting on a datacenter IP for CAPTCHAs to work reliably along with YouTube. Heavy amounts of traffic will make some sites NOT work on a single IP. Consider rotating IPs or routing through Wireguard using a project like <a href="https://github.com/whyvl/wireproxy">wireproxy</a>.
-
-## Setup / Usage
-
-You will need Node.js 16.x (and above) and Git installed; below is an example for Debian/Ubuntu setup.
+## Usage
+You will need Node.js 16+ and Git installed; below is an example for Debian/Ubuntu setup. For devices running other operating systems, please wait until a solution is made.
 
 ```
 sudo apt update
@@ -40,8 +28,8 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 20
 nvm use 20
 
-git clone https://github.com/MercuryWorkshop/Scramjet-App
-cd Scramjet-App
+git clone https://github.com/mesadev-esc/amphetamine
+cd amphetamine
 ```
 
 Install dependencies
@@ -49,24 +37,14 @@ Install dependencies
 pnpm install
 ```
 
-Run the server
+Run the scram server (terminal one):
 ```
 pnpm start
 ```
-
-Resources for self-hosting:
-
-- https://github.com/nvm-sh/nvm
-- https://docs.titaniumnetwork.org/guides/nginx/
-- https://docs.titaniumnetwork.org/guides/vps-hosting/
-- https://docs.titaniumnetwork.org/guides/dns-setup/
-
-### HTTP Transport
-
-The example uses [EpoxyTransport](https://github.com/MercuryWorkshop/EpoxyTransport) to fetch proxied data encrypted.
-
-You may also want to use [CurlTransport](https://github.com/MercuryWorkshop/CurlTransport), a different way of fetching encrypted data.
-
-This example also now uses [wisp-js/server](https://www.npmjs.com/package/@mercuryworkshop/wisp-js) instead of the now outdated wisp-server-node. Please note that this can also be replaced with other wisp implementations like [wisp-server-python](https://github.com/MercuryWorkshop/wisp-server-python) which is highly recommend for production.
-
-See the [bare-mux](https://github.com/MercuryWorkshop/bare-mux) documentation for more information.
+### Before continuing to this step, create a virtual environment!
+Run the wisp-server-python server (terminal two):
+```
+cd ./wisp-server-python
+python3 -m wisp.server
+```
+If you encounter any issues through this process, either create an issue OR DM me on discord: @mesadev
