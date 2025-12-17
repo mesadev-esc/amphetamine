@@ -2,14 +2,14 @@
 <p align="center">Amphetamine is (currently) a fast and secure web proxy that lets you browse the internet freely and access content without restrictions. Amphetamine uses Scramjet, along with wisp-server-python and CurlTransport for reliable speed while maintaining a fully functional service.</p>
 <h2 align="center">Supported sites</h2>
 <p>Thanks to scramjet's proxy support, Amphetamine supports various sites, such as:</p>
-- [Google](https://google.com)
-- [Twitter](https://twitter.com)
-- [Instagram](https://instagram.com)
-- [Youtube](https://youtube.com)
-- [Spotify](https://spotify.com)
-- [Discord](https://discord.com)
-- [Reddit](https://reddit.com)
-- [GeForce NOW](https://play.geforcenow.com/)
+[Google](https://google.com)
+[Twitter](https://twitter.com)
+[Instagram](https://instagram.com)
+[Youtube](https://youtube.com)
+[Spotify](https://spotify.com)
+[Discord](https://discord.com)
+[Reddit](https://reddit.com)
+[GeForce NOW](https://play.geforcenow.com/)
 NOTE: If you plan to play any games using GeForce NOW you must link your accounts through a home device. A patch is currently being worked on to fix this annoying experience.
 
 ## Usage
