@@ -27,6 +27,8 @@
 		"@mercuryworkshop/scramjet": "https://github.com/MercuryWorkshop/scramjet/releases/download/latest/mercuryworkshop-scramjet-2.0.0-alpha.tgz",
 		"@mercuryworkshop/wisp-js": "^0.3.3",
 		"fastify": "^5.4.0",
+		"react-dom": "19.1.0",
+		"react-native-web": "^0.21.0",
 		"ws": "^8.18.3"
 	},
 	"devDependencies": {
