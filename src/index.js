@@ -75,7 +75,7 @@ process.on("SIGTERM", shutdown);
 function shutdown() {
         console.log("SIGTERM signal received: closing HTTP server");
         fastify.close();
-        process.exit(0);
+        process.exit(0); 
 }
 
 let port = parseInt(process.env.PORT || "");

@@ -12,8 +12,8 @@
 		<link rel="stylesheet" href="index.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 		<script src="/scram/scramjet.all.js"></script>
-		<script src="baremux/index.js" defer></script>
-		<script src="epoxy/index.js" defer></script>
+		<script src="/baremux/index.js" defer></script>
+		<script src="/epoxy/index.js" defer></script>
 		<script src="register-sw.js" defer></script>
 		<script src="search.js" defer></script>
 		<script src="index.js" defer></script>
@@ -24,33 +24,33 @@
 	</head>
 
 	<body>
-		<header>
-			<div style="text-align: right;">
-				<button class="button" onclick="openLegal()" style="text-align: left; margin-top: 5px;">Legal</button>
-				<button class="button" onclick="cloakBlank()" style="margin-top: 5px;">Cloak in about:blank</button>
-			</div>
-				</header>
-					<div>
-						<div class="amp-tw-root">
-							<h1 class="amp-tw-heading" aria-label="Amphetamine">
-								&nbsp;<span class="amp-tw-text amp-tw-thick"></span>
-							</h1>
-						</div>
-					</div>
-					<form id="sj-form" class="flex-center">
-						<input
-							id="sj-search-engine"
-							value="https://www.duckduckgo.com/search?q=%s"
-							type="hidden"/>
-						<label class="label">
+		<!-- Combined controls and tabs -->
+		<div class="controls-and-tabs">
+			<div class="controls-group">
+				<button id="back-button" class="tab-control-button">←</button>
+				<button id="forward-button" class="tab-control-button">→</button>
+				<button id="reload-button" class="tab-control-button">↻</button>
+				<form id="sj-form" style="display: flex; align-items: center; margin: 0 10px;">
+					<input
+						id="sj-search-engine"
+						value="https://www.duckduckgo.com/search?q=%s"
+						type="hidden" />
+					<label class="label">
 						<span class="shortcut">
 							<img src="https://duckduckgo.com/assets/logo_homepage.normal.v108.svg" alt="" onerror="this.style.display='none'">
 						</span>
 						<input type="text" id="sj-address" class="search_bar" placeholder="Search the web..." />
-						</label>
-					</div>
-				</div>
-		</form>
+					</label>
+					<button type="submit" style="display: none;"></button>
+				</form>
+			</div>
+			<div id="tabs-container" class="tabs-container"></div>
+			<button id="add-tab" class="tab-button add-tab-button">+</button>
+		</div>
+		
+		<!-- Tab content area -->
+		<div id="tab-content" class="tab-content"></div>
+		
 		<div class="desc left-margin">
 			<p id="sj-error"></p>
 			<pre id="sj-error-code"></pre>
